@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}"
+</head>
+    <body>
+        <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{{ url_for('index') }}">
+                    <img src="{{ url_for('static', filename='cct-logo.jpg') }}">
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Calendar
+                    </a>
+                    <a class="navbar-item">
+                        Change Log
+                    </a>
+                    <a class="navbar-item" href="{{ url_for('announcements') }}">
+                        Announcements
+                    </a>
+                    <a class="navbar-item">
+                        Documentation
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div>
+            {% block content %}{% endblock %}
+        </div>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script res="script" src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>
+</html>

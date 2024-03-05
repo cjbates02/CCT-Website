@@ -1,0 +1,112 @@
+
+.main {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.main-left {
+    background-color: hsl(0, 0%, 96%);
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.main-right {
+    background-color: hsl(0, 0%, 96%);
+    margin-left: 10px;
+    padding: 10px
+}
+
+.announcement-button-div {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-bottom: solid hsl(0, 0%, 96%);
+  margin-bottom: 75px;
+}
+
+    
+.announcement-button {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: hsl(348, 100%, 61%);
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+}
+
+.announcement-component {
+  width: 80rem;
+  height: 17rem;
+  color: white;
+  background: hsl(348, 100%, 61%);
+  margin-top: 20px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.border-announcement {
+  border-bottom: solid hsl(0, 0%, 96%);
+  margin-left: 600px;
+  margin-right: 600px;
+}
+
+.desc-component {
+  width: auto;
+  height: 7rem;
+  background-color: hsl(0, 0%, 96%);
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: black;
+  padding: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.announcement-footer-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.announcement-date {
+  text-align: right;
+}
+
+.announcement-name {
+  margin-left: 20px;
+}
+
+
+.new-announcement {
+  width: auto;
+  justify-content: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 75px;
+}
+
+.announcement-title-delete-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.delete-button {
+  width: 30px;
+  height: 30px;
+  justify-self: end;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+

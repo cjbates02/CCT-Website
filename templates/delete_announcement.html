@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br />
+
+    <div class="delete-announcement-navbar">
+        <div></div>
+        <div>Name</div>
+        <div>Description</div>
+        <div>Creator</div>
+        <div>Date</div>
+
+        {% for a in announcements %}
+            <label class="delete-annoucement-item delete-announcement-checkbox {{ loop.cycle('even', 'odd') }} checkbox">
+                <input type="checkbox" class="checkbox">
+            </label>
+            <div class="delete-annoucement-item {{ loop.cycle('even', 'odd') }}">{{ a['name'] }}</div>
+            <div class="delete-annoucement-item {{ loop.cycle('even', 'odd') }}">{{ a['description'] }}</div>
+            <div class="delete-annoucement-item {{ loop.cycle('even', 'odd') }}">{{ a['creator'] }}</div>
+            <div class="delete-annoucement-item {{ loop.cycle('even', 'odd') }}">{{ a['date'] }}</div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
