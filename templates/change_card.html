@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container change-log-card">
+
+        <div class="change-log-title-grid change-log-title has-background-light">
+            <div class="change-title is-size-4 has-text-weight-semibold">{{ change_card['name'] }}</div>
+        </div>
+        <div class="description-div">
+            <label><p class="has-text-weight-semibold has-text-left">Description:</p></label>
+            <p class="has-text-left">{{ change_card['description'] }}</p>
+        </div>
+        <div class="rollback-steps">
+            <label><p class="has-text-weight-semibold has-text-left">Rollback Steps:</p></label>
+            <p class="has-text-left">{{ change_card['rollback_steps'] }}</p>
+        </div>
+
+        <div class="announcement-title-delete-grid">
+            <p class="has-text-left is-italic">Creator: {{ change_card['creator'] }}</p>
+            <p class="has-text-right is-italic">Date Created: {{ change_card['date'] }}</p>
+        </div>
+    </div>
+
+{% endblock %}

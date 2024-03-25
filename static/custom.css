@@ -109,4 +109,95 @@
   margin-bottom: 15px;
 }
 
+.change_log_grid_header {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  background-color: hsl(0, 0%, 96%);
+  border: solid lightgray 1px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+}
+
+.change_log_grid {
+  display: grid;
+  grid-template-columns: 60% 20% 15% 5%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-left: solid lightgray 1px;
+  border-right: solid lightgray 1px;
+  border-bottom: solid lightgray 1px;
+  place-items: left;
+  align-items: middle;
+  padding: 10px;
+}
+
+.change_log_item {
+  border-bottom: solid lightgray 1px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: grid;
+}
+
+.filler {
+  color: white;
+}
+
+.change-card-anchor {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.change-log-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.change-log-card {
+  margin-top: 200px;
+}
+
+.description-div {
+  height: 15rem;
+  border: lightgray solid 1px;
+  padding: 10px;
+}
+
+.rollback-steps {
+  height: 10rem;
+  border-left:lightgray solid 1px;
+  border-right:lightgray solid 1px;
+  border-bottom:lightgray solid 1px;
+  padding: 10px;
+}
+
+.change-log-title {
+  display: grid;
+  border-top: lightgray solid 1px;
+  border-left: lightgray solid 1px;
+  border-right: lightgray solid 1px;
+  text-align: center;
+  height : 50px;
+}
+
+
+.change-title {
+  margin: auto;
+  justify-content: right;
+}
+
+.trash-icon {
+  display: grid;
+  height: 15px;
+  width: 15px;
+}
 

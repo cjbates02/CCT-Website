@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="new-announcement">
+        <p class="is-size-4">Add a Change Log</p>
+        <br />
+        <form method="POST">
+            <div class="field">
+                <label class="label has-text-left">Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="New VM on Purple Stack!" name="name" id="name">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-left">Description</label>
+                <div class="control">
+                    <textarea class="textarea" type="text" placeholder="It is a kali linux VM for pen testing" name="description" id="description"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-left">Rollback Steps</label>
+                <div class="control">
+                    <textarea class="textarea" type="text" placeholder="Delete the VM" name="rollback_steps" id="rollback_steps"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-left">Your Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="e.g Shane Westphelan" name="creator" id="creator">
+                </div>
+            </div>
+
+            <a>
+                <button class="announcement-button" type="submit">Submit</button>
+            </a>
+
+        </form>
+    </div>
+{% endblock %}

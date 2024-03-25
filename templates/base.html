@@ -20,13 +20,13 @@
                     <a class="navbar-item">
                         Calendar
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="{{ url_for('change_log') }}">
                         Change Log
                     </a>
                     <a class="navbar-item" href="{{ url_for('announcements') }}">
                         Announcements
                     </a>
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="{{ url_for('doc') }}">
                         Documentation
                     </a>
                 </div>
@@ -35,7 +35,7 @@
         <div>
             {% block content %}{% endblock %}
         </div>
-        <script src="jquery-3.7.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script res="script" src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 </html>

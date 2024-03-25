@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="announcement-button-div">
+        <a href="{{ url_for('new_change_log') }}">
+            <button class="announcement-button">Add Change Log</button>
+        </a>
+    </div>
+
+    <div class="change_log_grid_header">
+        <div>
+            <p>Name</p>
+        </div>
+        <div>
+            <p>Creator</p>
+        </div>
+        <div>
+            <p>Date</p>
+        </div>
+    </div>
+
+    <form method="POST">
+        <div class="change_log_grid">
+            {% for c in changes %}
+                <a class="change-card-anchor change_log_item">
+                    <div>
+                        <button class="change-log-button" name="change_id" id="change_id" value="{{ c['id'] }}">{{ c['name'] }}</button>
+                    </div>
+                </a>
+                <div class="change_log_item">{{ c['creator'] }}</div>
+                <div class="change_log_item">{{ c['date'] }}</div>
+                <a onclick="deleteChangeLogWarning('{{ c['id'] }}')">
+                    <div class="change_log_item">
+                        <img class="icon" src="{{ url_for('static', filename='delete.svg') }}">
+                    </div>
+                </a>
+            {% endfor %}
+                <div class="filler">filler</div>
+                <div class="filler">filler</div>
+                <div class="filler">filler</div>
+        </div>
+    </form>
+
+{% endblock %}
