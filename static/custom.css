@@ -9,13 +9,13 @@
 }
 
 .main-left {
-    background-color: hsl(0, 0%, 96%);
+    /* background-color: hsl(0, 0%, 96%); */
     margin-right: 10px;
     padding: 10px;
 }
 
 .main-right {
-    background-color: hsl(0, 0%, 96%);
+    /* background-color: hsl(0, 0%, 96%); */
     margin-left: 10px;
     padding: 10px
 }
@@ -201,3 +201,128 @@
   width: 15px;
 }
 
+.diagram-grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  text-align: center;
+  justify-content: center;
+}
+
+.network-stack-div {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-bottom: solid 1px hsl(0, 0%, 96%);
+}
+
+.stack-delete-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.stack-title {
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  height: 45px;
+}
+
+.service-name {
+  margin-left: -160px;
+  border: none;
+  background-color: white;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.ip {
+  border-right: solid 1px hsl(0, 0%, 96%)
+}
+
+.add-button {
+  height: 25px;
+  width: 25px;
+}
+
+.stack-title-img-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: right;
+}
+
+.delete-stack-button {
+  margin-left: -175px;
+  border-left: hsl(0, 0%, 96%) solid 1px;
+}
+
+.title-margin {
+  margin-right: -50px;
+}
+
+.service-form {
+  width: 60%;
+  justify-content: center;
+  margin: auto;
+}
+
+
+.username-password-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 15px;
+  margin-right: 15px;
+}
+
+.service-form-inner {
+  padding: 10px;
+  border: solid 1px hsl(0, 0%, 96%)
+}
+
+.stack-submit-div {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.service-info {
+  border-left: hsl(0, 0%, 96%) solid 1px;
+  border-right: hsl(0, 0%, 96%) solid 1px;
+  border-bottom: hsl(0, 0%, 96%) solid 1px;
+  padding: 10px;
+}
+
+.calendar-div {
+  padding: 15px;
+}
+
+.start-end-div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 15px;
+}
+
+.add-event {
+  display: flex;
+  justify-content: right;
+}
+
+.home-page-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: white;
+  border: 1px solid hsl(0, 0%, 96%)
+}
+
+.title-home-page {
+  background-color: hsl(0, 0%, 96%);
+  padding: 12px;
+  font-weight: bold;
+}
+
+a:visited {
+  color: black;
+}

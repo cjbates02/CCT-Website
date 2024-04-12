@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="calendar-div">
+        <a class="add-event" href="{{url_for('add_event_form')}}"><button class="change-log-button">Add Event</button></a>
+        <div><br /></div>
+        <div id="calendar"></div>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let calEvents = []
+        let allDayVar = false;
+        let startVar = '';
+        let endVar = '';
+        
+        '{% for event in events %}'
+            allDayVar = ('{{event['all_day']}}' === '0') ? false : true;
+
+            startVar = '{{ event['start'] }}';
+            startTimeVar = '{{ event['start_time'] }}'
+  
+            startDate = new Date([startVar, startTimeVar]);
+
+            endVar = '{{ event['end'] }}';
+            endTimeVar = '{{ event['end_time'] }}'
+  
+            endDate = new Date([endVar, endTimeVar]);
+            
+
+            
+            calEvents.push({
+                id: '{{event['event_id']}}',
+                title: '{{event['title']}}',
+                start: startDate,
+                end: endDate,
+                allDay: allDayVar,
+            });
+
+        '{% endfor %}'
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        themeSystem: 'bootstrap5',
+        events: calEvents,
+        displayEventEnd: true,
+        eventClick: function(info) {
+            let deleteEvent = confirm('Would you like to delete this event?');
+
+            if (deleteEvent) {
+                $.ajax({
+                    url: '/delete_event',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({'id':info.event.id}),
+                })
+                location.reload();
+            }
+        }
+    });
+    calendar.render();
+  });
+</script>
+{% endblock %}

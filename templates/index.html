@@ -3,11 +3,27 @@
 {% block content %}
     <div class="main">
         <div class="main-left">
-            <p>Announcements</p>
+            <a href="{{ url_for('announcements')}}">
+                <p class="title-home-page">Announcements</p>
+            </a>
+            <div class="home-page-grid">
+                {% for a in announcements %}
+                    <p>{{ a['name']}}</p>
+                    <p>{{ a['description']}}</p>
+                {% endfor %}
+            </div>
         </div>
 
         <div class="main-right">
-            <p>Change Log</p>
+            <a href="{{ url_for('change_log') }}">
+                <p class="title-home-page">Change Log</p>
+            </a>
+            <div class="home-page-grid">
+                {% for c in changes %}
+                    <p>{{ c['name']}}</p>
+                    <p>{{ c['description']}}</p>
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

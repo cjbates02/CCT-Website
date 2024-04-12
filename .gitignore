@@ -2,3 +2,9 @@ __pycache__
 github.pub
 pyvenv.cfg
 github
+Include/
+Lib/
+Scripts/
+src/__pycache__
+node_modules/
+

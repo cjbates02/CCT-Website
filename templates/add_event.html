@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="new-announcement">
+    <p class="is-size-4">New Event</p>
+    <br />
+    <form method="POST">
+        <div class="field">
+            <label class="label has-text-left">Event Title</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="North Country Cybersecurity Conference" name="title" id="title" required>
+            </div>
+        </div>
+
+        <div class="start-end-div">
+            <div class="field">
+                <label class="label has-text-left">Start</label>
+                <div class="control">
+                    <input class="input" type="date" name="start" id="start" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label has-text-left">End (Select same day if event is only one day.)</label>
+                <div class="control">
+                    <input class="input" type="date" name="end" id="end" required>
+                </div>
+            </div>
+        </div>
+        <div class="start-end-div">
+            <div class="field">
+                <label class="label has-text-left">Start Time</label>
+                <div class="control">
+                    <input class="input" type="time" name="start-time" id="start-time" required>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label has-text-left">End Time</label>
+                <div class="control">
+                    <input class="input" type="time" name="end-time" id="end-time" required>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div>
+            <label class="checkbox">
+                <input type="checkbox" name="allday" id="allday"/>
+                All Day
+            </label>
+        </div>
+
+
+        <a>
+            <button class="announcement-button" type="submit">Submit</button>
+        </a>
+
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="service-form">
+    <div class="network-stack-div">
+        <div class="has-background-light stack-title has-text-centered">
+            <div class="title-margin">Add Service</div>
+        </div>
+        <form method="POST">
+            <div class=service-form-inner>
+                <div class="field">
+                    <label class="label has-text-left">Service Name</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="e.g TrueNas" name="name" id="name" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label has-text-left">IP Address</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="e.g 10.0.97.100" name="ip" id="ip" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label has-text-left">Description</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Splunk Enterprise" name="desc" id="desc" required>
+                    </div>
+                </div>
+                <div class="username-password-grid">
+                    <div class="field">
+                        <label class="label has-text-left">Username</label>
+                        <div class="control">
+                            <input class="input" type="text" name="username" id="username" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label has-text-left">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" name="password" id="password" required>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="network-stack" id="purple_stack" value="purple_stack" required/>
+                        Purple Stack
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="network-stack" id="red_stack" value="red_stack" required/>
+                        Red Stack
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="network-stack" id="blue_stack" value="blue_stack" required/>
+                        Blue Stack
+                    </label>
+                </div>
+
+                <div class="stack-submit-div">
+                    <a>
+                        <button class="announcement-button" type="submit">Submit</button>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

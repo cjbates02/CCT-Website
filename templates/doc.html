@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<form method="POST">
+    <div class="diagram-grid">
+        <div class="network-stack-div">
+            <div class="stack-title-img-grid has-background-light stack-title">
+                <div class="title-margin">Purple Stack</div>
+                <a href="{{url_for('add_service')}}"><img src="static/add.png" class="add-button"></a>
+            </div>
+            <div class="stack-grid">
+                {% for row in purple_stack_data %}
+                <div class="stack-delete-grid">
+                    <a onclick="deleteBlueStack('{{ row['service_id'] }}', 'purple_stack')">
+                        <img class="icon delete-stack-button" src="{{ url_for('static', filename='delete.svg') }}">
+                    </a>
+                    <a>
+                        <button class="service-name" name="service_data" id="service_data" value="{{ row['service_id'] }},purple_stack">{{row['name']}}</button>
+                    </a>
+                </div>
+                <div class="ip">{{row['ip']}}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="network-stack-div">
+            <div class="stack-title-img-grid has-background-light stack-title">
+                <div class="title-margin">Red Stack</div>
+                <a href="{{url_for('add_service')}}"><img src="static/add.png" class="add-button"></a>
+            </div>
+            <div class="stack-grid">
+                {% for row in red_stack_data %}
+                <div class="stack-delete-grid">
+                    <a onclick="deleteBlueStack('{{ row['service_id'] }}', 'red_stack')">
+                        <img class="icon delete-stack-button" src="{{ url_for('static', filename='delete.svg') }}">
+                    </a>
+                    <a>
+                        <button class="service-name" name="service_data" id="service_data" value="{{ row['service_id'] }},red_stack">{{row['name']}}</button>
+                    </a>
+                </div>
+                <div class="ip">{{row['ip']}}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="network-stack-div">
+            <div class="stack-title-img-grid has-background-light stack-title">
+                <div class="title-margin">Blue Stack</div>
+                <a href="{{url_for('add_service')}}"><img src="static/add.png" class="add-button"></a>
+            </div>
+            <div class="stack-grid">
+                {% for row in blue_stack_data %}
+                <div class="stack-delete-grid">
+                    <a onclick="deleteBlueStack('{{ row['service_id'] }}', 'blue_stack')">
+                        <img class="icon delete-stack-button" src="{{ url_for('static', filename='delete.svg') }}">
+                    </a>
+                    <a>
+                        <button class="service-name" name="service_data" id="service_data" value="{{ row['service_id'] }},blue_stack">{{row['name']}}</button>
+                    </a>
+                </div>
+                <div class="ip">{{row['ip']}}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
