@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Main container for the service information -->
+<div class="service-form">
+    <!-- Section that contains the service details -->
+    <div class="network-stack-div">
+        <!-- Displaying the name of the service -->
+        <div class="has-background-light stack-title has-text-centered">
+            <div class="title-margin">{{ service['name'] }}</div>
+        </div>
+
+        <!-- Section displaying service information -->
+        <div class="service-info">
+            <!-- Displaying the IP address of the service -->
+            <p><strong>IP Address: </strong>{{ service['ip'] }}</p>
+            <br />
+
+            <!-- Displaying the username for the service -->
+            <p><strong>Username: </strong>{{ service['username'] }}</p>
+
+            <!-- Displaying the password for the service -->
+            <p><strong>Password: </strong>{{ service['password'] }}</p>
+            <br />
+
+            <!-- Displaying a description of the service -->
+            <strong>Description: </strong>
+            <p>{{ service['desc'] }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

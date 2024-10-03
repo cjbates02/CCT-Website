@@ -1,0 +1,382 @@
+/* Main container with grid layout, two columns (40% width each), 
+centered text and content, and spacing using padding and margin */
+.main {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 25px;
+}
+
+/* Left section of the main container, optional background color commented out, 
+with padding and margin for spacing */
+.main-left {
+    /* background-color: hsl(0, 0%, 96%); */
+    margin-right: 10px;
+    padding: 10px;
+}
+
+/* Right section of the main container, optional background color commented out, 
+with padding and margin for spacing */
+.main-right {
+    /* background-color: hsl(0, 0%, 96%); */
+    margin-left: 10px;
+    padding: 10px;
+}
+
+/* Centered div for announcement button, with a border at the bottom and margin for spacing */
+.announcement-button-div {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-bottom: solid hsl(0, 0%, 96%);
+  margin-bottom: 75px;
+}
+
+/* Announcement button styling with top and bottom margins, 
+centered text, background color, and rounded corners */
+.announcement-button {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: hsl(348, 100%, 61%);
+  color: white;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+}
+
+/* Component styling for announcements, with fixed width and height, 
+centered, rounded corners, and padding for internal spacing */
+.announcement-component {
+  width: 80rem;
+  height: 17rem;
+  color: white;
+  background: hsl(348, 100%, 61%);
+  margin-top: 20px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+/* Bottom border for announcements, with large left and right margins */
+.border-announcement {
+  border-bottom: solid hsl(0, 0%, 96%);
+  margin-left: 600px;
+  margin-right: 600px;
+}
+
+/* Component for description sections with auto width, 
+specific height, background color, and margins for spacing */
+.desc-component {
+  width: auto;
+  height: 7rem;
+  background-color: hsl(0, 0%, 96%);
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: black;
+  padding: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Footer grid layout for announcements, with two equal-width columns */
+.announcement-footer-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Right-aligned text for announcement date */
+.announcement-date {
+  text-align: right;
+}
+
+/* Left-aligned text with a margin for the announcement name */
+.announcement-name {
+  margin-left: 20px;
+}
+
+/* New announcement container with centered content and large margins for spacing */
+.new-announcement {
+  width: auto;
+  justify-content: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 75px;
+}
+
+/* Grid layout for title and delete button in announcements, 
+with two equal-width columns */
+.announcement-title-delete-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* Styling for delete button with fixed size, 
+right alignment, and margin for spacing */
+.delete-button {
+  width: 30px;
+  height: 30px;
+  justify-self: end;
+  margin-right: 20px;
+  margin-bottom: 15px;
+}
+
+/* Header grid for change log section with three columns (60%, 20%, 20%) 
+and background, border, and padding for styling */
+.change_log_grid_header {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  background-color: hsl(0, 0%, 96%);
+  border: solid lightgray 1px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Grid layout for individual change log items with four columns, 
+and borders to style edges */
+.change_log_grid {
+  display: grid;
+  grid-template-columns: 60% 20% 15% 5%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-left: solid lightgray 1px;
+  border-right: solid lightgray 1px;
+  border-bottom: solid lightgray 1px;
+  place-items: left;
+  align-items: middle;
+  padding: 10px;
+}
+
+/* Styling for individual change log items with bottom border and padding */
+.change_log_item {
+  border-bottom: solid lightgray 1px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: grid;
+}
+
+/* Filler text styling, hidden with white color */
+.filler {
+  color: white;
+}
+
+/* Styling for anchor links in change log cards, 
+removing text decoration and inheriting color */
+.change-card-anchor {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Button styling for change log section, removing default button styles */
+.change-log-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Change log card styling with top margin */
+.change-log-card {
+  margin-top: 200px;
+}
+
+/* Div for descriptions with a fixed height, border, and padding for spacing */
+.description-div {
+  height: 15rem;
+  border: lightgray solid 1px;
+  padding: 10px;
+}
+
+/* Steps for rollback sections with fixed height and border styling */
+.rollback-steps {
+  height: 10rem;
+  border-left: lightgray solid 1px;
+  border-right: lightgray solid 1px;
+  border-bottom: lightgray solid 1px;
+  padding: 10px;
+}
+
+/* Change log title with a border and centered text */
+.change-log-title {
+  display: grid;
+  border-top: lightgray solid 1px;
+  border-left: lightgray solid 1px;
+  border-right: lightgray solid 1px;
+  text-align: center;
+  height: 50px;
+}
+
+/* Right-aligned change log title */
+.change-title {
+  margin: auto;
+  justify-content: right;
+}
+
+/* Trash icon styling with fixed height and width */
+.trash-icon {
+  display: grid;
+  height: 15px;
+  width: 15px;
+}
+
+/* Grid layout for diagrams with three equal-width columns and centered text */
+.diagram-grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Network stack section with padding and margin for spacing */
+.network-stack-div {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+/* Grid layout for stack section with two equal-width columns, 
+and bottom border for separation */
+.stack-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-bottom: solid 1px hsl(0, 0%, 96%);
+}
+
+/* Grid layout for stack delete section with two equal-width columns */
+.stack-delete-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+/* Stack title styling with padding, rounded corners, and height */
+.stack-title {
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  height: 45px;
+}
+
+/* Service name input with no border and bold font styling */
+.service-name {
+  margin-left: -160px;
+  border: none;
+  background-color: white;
+  font-size: medium;
+  font-weight: bold;
+}
+
+/* IP address section with a right border */
+.ip {
+  border-right: solid 1px hsl(0, 0%, 96%);
+}
+
+/* Add button with fixed size */
+.add-button {
+  height: 25px;
+  width: 25px;
+}
+
+/* Grid layout for stack title with right-aligned elements */
+.stack-title-img-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: right;
+}
+
+/* Delete button styling for stack, with left border and margin */
+.delete-stack-button {
+  margin-left: -175px;
+  border-left: hsl(0, 0%, 96%) solid 1px;
+}
+
+/* Right-aligned title margin */
+.title-margin {
+  margin-right: -50px;
+}
+
+/* Form for services with centered layout and automatic width */
+.service-form {
+  width: 60%;
+  justify-content: center;
+  margin: auto;
+}
+
+/* Grid layout for username and password sections with a gap */
+.username-password-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 15px;
+  margin-right: 15px;
+}
+
+/* Inner section of service form with padding and border */
+.service-form-inner {
+  padding: 10px;
+  border: solid 1px hsl(0, 0%, 96%);
+}
+
+/* Flex layout for stack submit button, centered */
+.stack-submit-div {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+/* Service info section with borders and padding */
+.service-info {
+  border-left: hsl(0, 0%, 96%) solid 1px;
+  border-right: hsl(0, 0%, 96%) solid 1px;
+  border-bottom: hsl(0, 0%, 96%) solid 1px;
+  padding: 10px;
+}
+
+/* Calendar div with padding */
+.calendar-div {
+  padding: 15px;
+}
+
+/* Grid layout for start and end sections with a gap */
+.start-end-div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 15px;
+}
+
+/* Right-aligned event section */
+.add-event {
+  display: flex;
+  justify-content: right;
+}
+
+/* Home page grid layout with two equal-width columns, background color, and border */
+.home-page-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: white;
+  border: 1px solid hsl(0, 0%, 96%);
+}
+
+/* Title section for the home page with background color and bold font */
+.title-home-page {
+  background-color: hsl(0, 0%, 96%);
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* Visited links color styling */
+a:visited {
+  color: black;
+}

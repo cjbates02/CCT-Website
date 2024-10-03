@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="new-announcement">
+    <p class="is-size-4">Create an Announcement</p>
+    <br />
+    <form method="POST">
+        <div class="field">
+            <label class="label has-text-left">Announcement Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="e.g CCT Announcement" name="name" id="name">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label has-text-left">Description</label>
+            <div class="control">
+                <textarea class="textarea" type="text" placeholder="e.g the cct website will be turned off tomorrow" name="description" id="description"></textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label has-text-left">Your Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="e.g Luke Zarko" name="creator" id="creator">
+            </div>
+        </div>
+
+        <a>
+            <button class="announcement-button" type="submit">Submit</button>
+        </a>
+
+    </form>
+</div>
+{% endblock %}
